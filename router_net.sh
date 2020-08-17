@@ -33,7 +33,6 @@ if [ -f $new ]; then
         points=$( echo $line | sed 's/^[^ ]* //g' )
 		interface=$( echo $line | sed 's/ .*$//g' )
 		$dir/todb.sh "$name" "$columns" "$points" "interface=$interface"
-        sleep 1
     done
     mv $new $old
 fi
